@@ -33,23 +33,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ButtonActionSheet(_ sender: Any) {
-        let allertController = UIAlertController(title: "Baslik", message: "Mesaj", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Baslik", message: "Mesaj", preferredStyle: .actionSheet)
+        
         let iptalAction = UIAlertAction(title: "iptal", style: .cancel){
             action in print("Iptal secildi")
         }
         
-        allertController.addAction(iptalAction)
+        alertController.addAction(iptalAction)
         
         
         let tamamAction = UIAlertAction(title: "TAMAM", style: .destructive){
             action in print("Tamam secildi")
         }
         
-        allertController.addAction(tamamAction)
-        self.present(allertController, animated: true)
+        alertController.addAction(tamamAction)
+        self.present(alertController, animated: true)
 
         
-        self.present(allertController, animated: true)
+        self.present(alertController, animated: true)
     }
     @IBAction func ButtonOzelAlert(_ sender: Any) {
         
